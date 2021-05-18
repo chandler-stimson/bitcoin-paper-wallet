@@ -1,0 +1,91 @@
+body {
+  font-size: 13px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 10px;
+}
+form {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  grid-gap: 5px;
+  white-space: nowrap;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 7px;
+  font-family: monospace;
+  box-sizing: border-box;
+  border: solid 1px #e4e4e4;
+}
+
+input[type=text][readonly] {
+  background-color: #e4e4e4;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+h1 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+hr {
+  border: none;
+  border-bottom: dashed 1px #e4e4e4;
+  margin-top: 40px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#tools p {
+  display: flex;
+  justify-content: flex-end;
+}
+#tools p input {
+  margin-left: 5px;
+}
+
+#random-hex {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(32, 1fr);
+}
+@media screen and (max-width: 1200px) {
+  #random-hex {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  #random-hex {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+#random-hex input {
+  border: none;
+  background-color: #bce0ff;
+  padding: 7px 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: monospace;
+}
+
+#stats > div {
+  padding: 10px;
+}
+
+#stats > div b {
+  font-family: monospace;
+}
