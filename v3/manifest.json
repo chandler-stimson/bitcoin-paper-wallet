@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "version": "0.2.1",
+  "name": "Bitcoin Paper Wallet Generator",
+  "description": "Generate random private (WIF) and public keys or verify your compressed or uncompressed BTC addresses in a secure window",
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png",
+    "512": "data/icons/512.png"
+  },
+  "offline_enabled": true,
+  "action": {},
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "incognito": "split"
+}
+

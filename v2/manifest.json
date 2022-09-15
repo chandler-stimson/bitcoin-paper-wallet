@@ -12,6 +12,7 @@
     "256": "data/icons/256.png",
     "512": "data/icons/512.png"
   },
+  "offline_enabled": true,
   "browser_action": {},
   "background": {
     "persistent": false,
